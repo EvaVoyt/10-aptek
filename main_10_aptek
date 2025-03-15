@@ -43,13 +43,6 @@ def main():
         print('Объект не найден')
         return 1
     lat, lon = get_ll_from_geocode_response(toponym)
-    # span = 0.01
-    # nearest_drugstores = []
-    # while span < 100 and len(nearest_drugstores) < 10:
-    #     span *= 2.0
-    #
-    #     nearest_drugstores = get_organizations_to_point('аптека', ll=",".join([lat, lon]),
-    #                                                     spn=f'{span},{span}')
     nearest_drugstores = get_organizations_to_point('аптека', ll=",".join([lat, lon]),
                                                     spn=f'0.001,0.001')
     pointer_style = 'pm2'
